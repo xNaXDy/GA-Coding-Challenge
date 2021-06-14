@@ -1,4 +1,4 @@
-# GrapeAlliance Coding Challenge
+# Coding Challenge
 
 ## How To Run
 
@@ -29,6 +29,8 @@ Navigate to `./challenge-frontend` and `./challenge-backend` and run `npm instal
 Afterwards, navigate back to the root folder of the repository and execute `npm run dev`. Both the Nest & Angular applications will be started in watch mode, and a mongodb docker container will be started also.
 
 The frontend will be accessible via `http://localhost:4200` and the backend will be available under `http://localhost:3000`
+
+In dev mode only, there is also a Swagger documentation, accessible under `http://localhost:3000/documentation`
 
 Executing Ctrl+C while either application is running will terminate both. To stop the mongodb docker container, run 
 ```
