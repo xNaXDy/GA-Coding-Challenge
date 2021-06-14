@@ -69,7 +69,6 @@ export class WineController {
     type: Wine,
   })
   async createWine(@Body() body: Wine): Promise<void> {
-    console.log(body);
     await this.wineService.createWine(body);
   }
 
