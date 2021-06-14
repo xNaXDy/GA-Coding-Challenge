@@ -1,0 +1,14 @@
+{
+  "name": "grapealliance-coding-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy-schema": "cp challenge-backend/src/db/**/*.schema.ts challenge-frontend/src/app/schema/",
+    "get-docker-ip": "/sbin/ip route|awk '/default/ { print $3 }'",
+    "docker": "docker-compose -f docker-compose.prod.yml down && docker-compose -f docker-compose.prod.yml up --build --force-recreate",
+    "dev": "docker-compose -f docker-compose.dev.yml down && docker-compose -f docker-compose.dev.yml up -d && cd challenge-backend && npm run dev & cd challenge-frontend && npm run dev"
+  },
+  "author": "Naxdy",
+  "license": "ISC"
+}

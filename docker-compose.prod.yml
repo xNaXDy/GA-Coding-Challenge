@@ -1,0 +1,33 @@
+version: '3'
+services:
+    challenge-frontend:
+        build: ./challenge-frontend
+        ports:
+            - 4200:4000
+        environment:
+            NODE_ENV: production
+        depends_on: 
+            - challenge-backend
+    challenge-backend:
+        build: ./challenge-backend
+        ports:
+            - 3000:3000
+        environment:
+            NODE_ENV: production
+            MONGO_USER: challengedb_user
+            MONGO_PASS: fgdsjbutg95eygh89e76thj8g956hs8e9r6hg8es7r6gyertsdrygd
+            MONGO_HOST: challenge-db
+        depends_on: 
+            - challenge-db
+    challenge-db:
+        image: mongo:4.2.12-bionic
+        expose:
+            - 27017
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=challengedb_user
+            - MONGO_INITDB_ROOT_PASSWORD=fgdsjbutg95eygh89e76thj8g956hs8e9r6hg8es7r6gyertsdrygd
+        volumes:
+            - mongodb:/data/db
+volumes:
+    mongodb:
+        driver: local

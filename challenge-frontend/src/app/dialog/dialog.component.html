@@ -1,0 +1,68 @@
+<mat-dialog-content class="mat-typography">
+  <h2>{{ editMode ? 'Edit Wine' : 'Add Wine' }}</h2>
+  <mat-form-field>
+    <mat-label>Country</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.country" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Appellation</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.appellation" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.description" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Grape</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.grape" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Lage</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.lage" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Region</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.region" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Sweetness</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.sweetness" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.title" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Wine Color</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.wineColor" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Wine Type</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.wineType" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Winery</mat-label>
+    <input matInput type="text" [(ngModel)]="wineData.winery" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Acidity</mat-label>
+    <input matInput type="number" [(ngModel)]="wineData.acidity" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Alcohol Level</mat-label>
+    <input matInput type="number" [(ngModel)]="wineData.alcoholLevel" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Sugar Level</mat-label>
+    <input matInput type="number" [(ngModel)]="wineData.sugarLevel" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Vintage</mat-label>
+    <input matInput type="number" [(ngModel)]="wineData.vintage" />
+  </mat-form-field>
+  <mat-checkbox class="example-margin" [(ngModel)]="wineData.validEAN">Valid EAN</mat-checkbox>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirm</button>
+</mat-dialog-actions>
