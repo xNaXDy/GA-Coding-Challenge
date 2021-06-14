@@ -4,7 +4,7 @@
 
 ### Docker Mode
 
-First execude the npm command
+First execute the npm command
 
 ```
 npm run get-docker-ip
